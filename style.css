@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgcolor:linear-gradient(99deg, rgba(114,63,217,0.43461134453781514) 48%, rgba(255,69,120,0.43461134453781514) 100%);
+    --header: linear-gradient(to left,#74ebd5, #9face6);
+}
+body{
+    background-image:  var(--bgcolor),url('img/bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 4rem;
+}
+.container{
+    background: #fff;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.5rem 0.5rem -0.1rem rgba(1, 253, 253, 0.435);
+    width: calc(100vw - 60vw);
+    max-width: 100%;
+    
+    
+}
+.header{
+    background: var(--header);
+    padding: 2rem 0;
+}
+ .header h1{ 
+    color: rgb(0, 0, 0);
+    font-size: 2.24rem;
+    text-transform: uppercase;
+    text-align: center;
+ }
+
+.form{
+    padding: 3rem;
+    
+}
+.form-control{
+    
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 0.1rem;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+.form-control input{
+    width: 100%;
+    border: 0.2rem solid #f0f0f0;
+    border-radius: .5rem;
+    display: block;
+    font-size: 1rem;
+    padding: .5rem;
+
+}
+
+.form-control i{
+    position: absolute;
+    right: 1.2rem;
+    top: 2.7rem;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-triangle{
+    color: #d12020;
+    visibility: visible;
+}
+
+.form-control small{
+    font-size: 1rem;
+    color: #d12020;
+    position: absolute;
+   
+    left: 0;
+    visibility: hidden;    
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+
+.form-control input:focus{
+    outline: 0;
+    border-color: #777;
+}
+.form-control.success input{
+    border-color: #2ecc71;
+}
+.form-control.error input{
+    border-color: #d12020;
+}
+
+
+
+ .form .btn{
+     background: var(--header);
+     border-radius: 0.3rem;
+     border: none;
+     outline: none;
+     color: #fff;
+     display: block;
+     font-size: 1.5rem;
+     padding: 1rem 0;
+     margin-top: 2rem;
+     width: 100%;
+     font-weight: bold;
+     text-transform: uppercase;
+     transition: all 0.5s ease;
+     cursor: pointer;
+ }
+
+ .form .btn:hover{
+     background: linear-gradient(to right ,#74ebd5, #9face6);
+     color: black;
+     
+ }
+ @media(max-width:998px){
+     .container{
+         width: calc(100vw - 35vw);
+         max-width: 100%;
+     }
+ }

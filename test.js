@@ -1,0 +1,3 @@
+function leap(year) {
+    year%
+}
